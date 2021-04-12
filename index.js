@@ -1,6 +1,7 @@
 const { ApolloServer, PubSub } = require("apollo-server");
 const mongoose = require("mongoose");
 const { MongoDB } = require("./config.js");
+const PORT = process.env.PORT || 8080;
 const typeDefs = require("./graphql/typeDefs");
 const resolvers = require("./graphql/resolvers");
 const pubsub = new PubSub();
@@ -18,7 +19,8 @@ mongoose
   })
   .then(() => {
     console.log("MongoDB connected.");
-    return server.listen({ port: 8080 });
+    console.log("PORT: " + PORT);
+    return server.listen({ port: PORT });
   })
   .then((res) => {
     console.log(`Server running at ${res.url}`);
