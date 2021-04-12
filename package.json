@@ -9,7 +9,7 @@
     "serve": "node index",
     "start": "NODE_ENV='production' node index.js",
     "dev": "nodemon index",
-    "build": "babel server.js --out-file index.compiled.js"
+    "build": "babel index.js --out-file index.compiled.js"
   },
   "license": "MIT",
   "dependencies": {
