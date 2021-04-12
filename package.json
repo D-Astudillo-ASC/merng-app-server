@@ -5,11 +5,8 @@
   "main": "index.js",
   "author": "Daniel Astudillo ",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "node index",
-    "start": "NODE_ENV='production' node index.js",
-    "dev": "nodemon index",
-    "build": "babel index.js --out-file index.compiled.js"
+    "start": "nodemon index"
   },
   "license": "MIT",
   "dependencies": {
